@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(251, 251, 248);
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+}
+
+header h1{
+    margin-left: 5%;
+    width: 30%;
+}
+
+.upload-section{
+    width: 40%;
+    margin: 0 5%;
+    display: none; 
+    flex-wrap: wrap;
+}
+
+.choose-reels{
+    width: 50%;
+}
+
+.progress{
+    width: 100%;
+    text-indent: 35%;
+    display: none;
+}
+
+nav{
+    margin-right: 5%;
+    width: 20%;
+    display: flex;
+}
+
+nav button{
+    margin-right: 5%;
+}
+
+.username{
+   
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    max-width: 480px;
+    height: 80%;
+    margin: 0 auto;
+    
+}
+
+#reels-container{
+    max-width: 480px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow:scroll;
+}
+
+.reels-play{
+    width: 400px;
+    height: 95vh;
+}
+
+@keyframes scroll {
+    0%{
+        transform: translateY(0);
+    }
+
+    100%{
+        transform: translateY(-680px);
+    }
+}

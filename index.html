@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/home.css">
+    <title>Instagram Reels</title>
+</head>
+<body>
+    <header>
+        <h1>Instagram Reels</h1>
+        <div class="upload-section">
+            <input type="file" class="choose-reels" required type="">
+            <button id="upload-reels">Upload Reels</button>
+            <p class="progress"></p>
+        </div>
+        <nav>
+            <button id="show-uploader">Choose Reels</button>
+            <button>Log Out</button>
+            <button>Log In</button>
+            <p class="username">Profile</p>
+        </nav>
+    </header>
+    <main>
+        <div id="reels-container">
+        </div>
+    </main>
+    <!-- <main>
+        <div class="image-container">
+            <img src="/Files/Phone-Back.jpg" class="back-image">
+            <img src="/Files/Phone-Back.jpg" class="front-image">
+            <img src="/Files/th.jpg" class="overlay">
+        </div>
+        <section>
+            <ul class="sign-in-container">
+                <li><h1>Instagram</h1></li>
+                <li class="input-container">
+                    <label>Username or Email</label>
+                    <input type="text" id="username" required>
+                </li>
+                <li class="input-container">
+                    <label>Password</label>
+                    <input type="password" id="password" required> 
+                </li>
+                <li>
+                    <button id="log-in">Log in</button>
+                    <button id="fb-login"><i class="fa-brands fa-facebook"></i> Log in with Facebook</button>
+                    <button id="forgot-password">Forgot Password?</button>
+                </li>
+            </ul>
+            <div class="sign-up">
+                <p>Don't have an account?</p>
+                <a href="sign-up.html">Sign Up</a>
+            </div>
+        </section>
+    </main> -->
+
+    <!-- <main>
+        <div class="signUp-container">
+            <h1>Instagram</h1>
+            <p>Sign up to see photos and videos<br>from your friends</p>
+            <button id="fb-login"><i class="fa-brands fa-facebook"></i> Log in with Facebook</button>
+            <form id="sign-up-form">
+                <input type="email" placeholder="Email" name="email" required>
+                <input type="text" placeholder="Full Name" name="fullName" required>
+                <input type="text" placeholder="Username" name="username" required>
+                <input type="password" placeholder="Password" name="password" required>
+                <p>People who use our service may have uploaded<br>your contact information to Instagram.</p>
+                <p>By signing up,you agree to our <span>Terms, Privacy<br>Policy</span> and <span>Cookies Policy.</span></p>
+                <button id="signed-up">Sign Up</button>
+            </form>
+        </div>
+        <div class="log-in">
+            <p>Have an account? <a href="login.html">Log In</a></p>
+            
+        </div>
+    </main> -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-storage-compat.js"></script>
+    <script src="/JS/main.js"></script>
+</body>
+</html>
