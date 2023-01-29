@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sign-up.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <title>Sign Up • Instagram Reels</title>
+</head>
+<body>
+    <article class="sign-up-page">
+        <div class="signUp-container">
+            <h1>Instagram</h1>
+            <p>Sign up to see photos and videos<br>from your friends</p>
+            <button id="fb-login"><i class="fa-brands fa-facebook"></i> Log in with Facebook</button>
+            <form id="sign-up-form">
+                <input type="email" placeholder="Email" name="email" required>
+                <input type="text" placeholder="Full Name" name="fullName" required>
+                <input type="text" placeholder="Username" name="username" required>
+                <input type="password" placeholder="Password" name="password" required>
+                <label>Setup Your Security Question</label>
+                <select>
+                    <option>Who is your favourite SportsPerson?</option>
+                    <option>What is your favourite food?</option>
+                </select>
+                <input type="text" name="answer" placeholder="Answer of Security Question" required>
+                <p>People who use our service may have uploaded<br>your contact information to Instagram.</p>
+                <p>By signing up,you agree to our <span>Terms, Privacy<br>Policy</span> and <span>Cookies Policy.</span></p>
+                <button id="signed-up">Sign Up</button>
+            </form>
+        </div>
+        <div class="log-in">
+            <p>Have an account? <a href="login.html">Log In</a></p>
+            
+        </div>
+    </article>
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-storage-compat.js"></script>
+    <script src="sign-up.js"></script>
+</body>
+</html>

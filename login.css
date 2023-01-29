@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(251, 251, 248);
+}
+
+.sign-in-page{
+    display: flex;
+    justify-content: center;
+    max-width: 980px;
+    margin: 5% auto;
+}
+
+.image-container{
+    height: 550px;
+    width: 350px;
+    position: relative;
+}
+
+.front-image{
+    position: absolute;
+    height: 480px;
+    width: 250px;
+    border-radius: 40px;
+    right: 0;
+    top: 10px;
+}
+
+.back-image{
+    position: absolute;
+    height: 480px;
+    width: 250px;
+    left: 0;
+}
+
+.overlay{
+    position: absolute;
+    right: 10px;
+    top: 22px;
+    height: 455px;
+    width: 230px;
+    border-radius: 25px;
+}
+
+section{
+    margin-left: 30px;
+}
+
+.sign-in-container{
+    width: 450px;
+    height: 400px;
+    background-color: white;
+    border: 1px solid rgb(224, 223, 223);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 3%;
+}
+
+.sign-in-container li{
+    list-style: none;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.sign-in-container li h1{
+    padding: 10%;
+    font-size: 50px;
+    text-align: center;
+}
+
+.input-container{
+    border: 1px solid rgb(226, 221, 221);
+    background-color: rgb(245, 242, 242);
+    margin-bottom: 2%;
+    border-radius: 10px;
+    text-indent: 2%;
+    font-weight: 500;
+}
+
+.input-container label{
+    margin: 1% 0;
+    padding-left: 1%;
+    color: rgb(117, 117, 114);
+}
+
+.input-container input{
+    background-color: transparent;
+    border: none;
+    height: 30px;
+    padding-left: 3%;
+    font-size: 17px;
+}
+
+.input-container input:focus{
+    outline: none;
+}
+
+#log-in{
+    background-color: rgb(0, 128, 255);
+    color: white;
+    width: 100%;
+    padding: 2% 0;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+}
+
+#fb1-login{
+    color: blue;
+    border: none;
+    font-size: 18px;
+    background-color: white;
+    margin-top: 10%;
+    cursor: pointer;
+}
+
+#forgot-password{
+    background-color: transparent;
+    border: none;
+    color: rgb(70, 43, 226);
+    font-size: 14px;
+    margin-top: 8%;
+    cursor: pointer;
+}
+
+.sign-up{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3% 0;
+    border: 1px solid rgb(224, 223, 223);
+    margin-top: 2%;
+    background-color: white;
+}
+
+.sign-up p{
+    font-size: 17px;
+    margin-right: 1%;
+}
+
+.sign-up a{
+    color: blue;
+    border: none;
+    text-decoration: none;
+    background-color: transparent;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.sign-up a::after{
+    text-decoration: none;
+}
