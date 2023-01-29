@@ -9,7 +9,7 @@ body{
     background-color: rgb(251, 251, 248);
 }
 
-.sign-up-display{
+.sign-up-page{
     display: flex;
     flex-direction: column;
     max-width: 980px;
@@ -28,7 +28,7 @@ body{
     align-items: center;
     padding-bottom: 3%;
     text-align: center;
-    margin: 3% auto;
+    margin: 1% auto;
     padding: 2% 0 4% 0;
 }
 
@@ -73,6 +73,10 @@ body{
     border-radius: 10px;
     color: white;
     font-weight: 700;
+}
+
+#sign-up-form label{
+    margin: 3% 0;
 }
 
 #fb-login{

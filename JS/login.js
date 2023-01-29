@@ -10,20 +10,19 @@ setInterval(()=>{
     overlayView();
 },4000);
 
-
 const firebaseApp = firebase.initializeApp({
-    apiKey: "AIzaSyAy8ThfDcxKGFTsFaa6YK-SuRQ75BprKyk",
-    authDomain: "insta-reels-79019.firebaseapp.com",
-    projectId: "insta-reels-79019",
-    storageBucket: "insta-reels-79019.appspot.com",
-    messagingSenderId: "719535708155",
-    appId: "1:719535708155:web:040bab3c91c7eb5f951d5e"
+    apiKey: "AIzaSyAwCsatTla6vIrW__r2aR7DYJ6Euve_Of4",
+    authDomain: "reels-12345.firebaseapp.com",
+    projectId: "reels-12345",
+    storageBucket: "reels-12345.appspot.com",
+    messagingSenderId: "11330518083",
+    appId: "1:11330518083:web:3b44fa7b0101ed1cc4a8f6"
 })
 
 const db = firebaseApp.firestore();
 const auth = firebaseApp.auth();
 
-const readData = () =>{
+const signIn = () =>{
     const email = document.getElementById("username").value;
     const password =document.getElementById("password").value;
     let rawData;
@@ -34,20 +33,31 @@ const readData = () =>{
             return {...item.data(),id:item.id}
         }))
         rawData.forEach(ele =>{
-            if(ele.password == password && ele.username == email || ele.email == email){
+            if(ele.password == password && ele.email == email){
+                localStorage.clear();
+                localStorage.setItem('data',JSON.stringify(ele));
                 window.location.href = "/index.html";
-                const username = document.querySelector(".username");
-                username.innerHTML = ele.username;
-                } else {
-                    alert("wrong username/Password");
-                }
-        })
+            }
+        })  
     })
 }
 
 const login = document.getElementById("log-in");
-
 login.addEventListener("click",()=>{
-    readData();
-    
+    signIn();
+})
+
+
+window.onload = () =>{
+    let data = localStorage.getItem('data');
+    let dataLog = JSON.parse(data);
+    if(dataLog.log == 'true'){
+        window.location.href = "/index.html"
+    }
+}
+
+const forgot = document.querySelector("#forgot-password");
+
+forgot.addEventListener('click',()=>{
+    window.location.href = "forgot.html"
 })

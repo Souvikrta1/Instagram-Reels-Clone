@@ -9,7 +9,7 @@ body{
     background-color: rgb(251, 251, 248);
 }
 
-main{
+.sign-in-page{
     display: flex;
     justify-content: center;
     max-width: 980px;
@@ -114,7 +114,7 @@ section{
     border: none;
 }
 
-#fb-login{
+#fb1-login{
     color: blue;
     border: none;
     font-size: 18px;
