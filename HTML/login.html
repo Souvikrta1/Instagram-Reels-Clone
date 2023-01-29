@@ -9,7 +9,7 @@
     <title>Instagram</title>
 </head>
 <body>
-    <main>
+    <article class="sign-in-page">
         <div class="image-container">
             <img src="/Files/Phone-Back.jpg" class="back-image">
             <img src="/Files/Phone-Back.jpg" class="front-image">
@@ -19,7 +19,7 @@
             <ul class="sign-in-container">
                 <li><h1>Instagram</h1></li>
                 <li class="input-container">
-                    <label>Username or Email</label>
+                    <label>Email</label>
                     <input type="text" id="username" required>
                 </li>
                 <li class="input-container">
@@ -28,7 +28,7 @@
                 </li>
                 <li>
                     <button id="log-in">Log in</button>
-                    <button id="fb-login"><i class="fa-brands fa-facebook"></i> Log in with Facebook</button>
+                    <button id="fb1-login" disabled><i class="fa-brands fa-facebook"></i> Log in with Facebook</button>
                     <button id="forgot-password">Forgot Password?</button>
                 </li>
             </ul>
@@ -37,12 +37,11 @@
                 <a href="sign-up.html">Sign Up</a>
             </div>
         </section>
-    </main>
+    </article>
     <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-auth-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-storage-compat.js"></script>
     <script src="/JS/login.js"></script>
-    
 </body>
 </html>
