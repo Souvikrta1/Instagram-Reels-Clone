@@ -1,7 +1,7 @@
 const overlay = document.querySelector(".overlay");
 
 const overlayView = () =>{
-    let overlayImg = ["/Files/Reels-pic.jpg","/Files/overlay1.jpg","/Files/overlay 2.jpg","/Files/th.jpg"];
+    let overlayImg = ["Reels-pic.jpg","overlay1.jpg","overlay 2.jpg","th.jpg"];
 
     overlay.setAttribute('src',overlayImg[Math.floor(Math.random() * overlayImg.length)]);
 }
