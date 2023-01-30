@@ -32,13 +32,18 @@ const signIn = () =>{
         rawData = (data.docs.map((item) =>{
             return {...item.data(),id:item.id}
         }))
+        let count = 0;
         rawData.forEach(ele =>{
             if(ele.password == password && ele.email == email){
+                count++;
                 localStorage.clear();
                 localStorage.setItem('data',JSON.stringify(ele));
                 window.location.href = "index.html";
             }
-        })  
+        })
+        if(count == 0){
+            alert("Invalid Username/Password");
+        }
     })
 }
 
