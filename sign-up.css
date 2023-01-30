@@ -19,7 +19,7 @@ body{
 }
 
 .signUp-container{
-    width: 450px;
+    width: 80%;
     height: max-content;
     background-color: white;
     border: 1px solid rgb(224, 223, 223);
@@ -91,12 +91,13 @@ body{
 }
 
 .log-in{
-    width: 450px;
+    width: 80%;
     height: max-content;
     background-color: white;
     border: 1px solid rgb(224, 223, 223);
     padding: 2% 0;
     text-align: center;
+    margin: 0 auto;
 }
 
 .log-in p{
@@ -112,3 +113,11 @@ body{
     text-decoration: none;
 }
 
+@media only screen and (max-width:700px){
+    .signUp-container{
+        width: 100%;
+    }
+    .log-in{
+        width: 100%;
+    }
+}
