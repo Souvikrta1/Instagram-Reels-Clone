@@ -60,7 +60,11 @@ uploadReels.addEventListener("click",(e)=>{
             like : [],
             comment : []
         })
-    }))
+    })).then(()=>{
+        setTimeout(()=>{
+            window.location.href="index.html";
+        },5000)
+    })
 })
 
 let reels = document.querySelector(".reels-container");
