@@ -1,10 +1,10 @@
 const firebaseApp = firebase.initializeApp({
-    apiKey: "AIzaSyAwCsatTla6vIrW__r2aR7DYJ6Euve_Of4",
-    authDomain: "reels-12345.firebaseapp.com",
-    projectId: "reels-12345",
-    storageBucket: "reels-12345.appspot.com",
-    messagingSenderId: "11330518083",
-    appId: "1:11330518083:web:3b44fa7b0101ed1cc4a8f6"
+    apiKey: "AIzaSyBBnBTK2ipS9KbHrrd9fBpCBiRSaslKw3E",
+    authDomain: "reels-8c3f2.firebaseapp.com",
+    projectId: "reels-8c3f2",
+    storageBucket: "reels-8c3f2.appspot.com",
+    messagingSenderId: "554502677111",
+    appId: "1:554502677111:web:97587a519c821b7b625c72"
 })
 
 let data = localStorage.getItem('data');
