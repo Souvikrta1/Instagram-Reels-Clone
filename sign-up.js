@@ -1,10 +1,10 @@
 const firebaseApp = firebase.initializeApp({
-      apiKey: "AIzaSyBBnBTK2ipS9KbHrrd9fBpCBiRSaslKw3E",
-  authDomain: "reels-8c3f2.firebaseapp.com",
-  projectId: "reels-8c3f2",
-  storageBucket: "reels-8c3f2.appspot.com",
-  messagingSenderId: "554502677111",
-  appId: "1:554502677111:web:97587a519c821b7b625c72"
+     apiKey: "AIzaSyBUdoks0DRGjgbHXVTXCbbAQ0Qpr4uyUnA",
+    authDomain: "reels-pro.firebaseapp.com",
+    projectId: "reels-pro",
+    storageBucket: "reels-pro.appspot.com",
+    messagingSenderId: "100087925963",
+    appId: "1:100087925963:web:a8e5829695f485f9fa9f4e"
 })
 
 const db = firebaseApp.firestore();
