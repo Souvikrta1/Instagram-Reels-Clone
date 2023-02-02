@@ -81,10 +81,11 @@ let mainShow = () =>{
         rawData.forEach(ele =>{
             reels.innerHTML += `<li class="reel-data" id="${ele.id}">
                                     <p class="userView"><i class="fa-solid fa-user"></i> ${ele.username}</p>
-                                    <button class="like"><i class="fa-solid fa-heart like"></i>${ele.like.length}</button>
+                                    <button class="like"><i class="fa-solid fa-heart like"></i><p class="like-length${ele.id}">${ele.like.length}</p></button>
                                     <button class="comment"><i class="fa-regular fa-comment comment"></i></button>
                                     <button class="show-comment"><i class="fa-solid fa-message show-comment"></i></button>
-                                    <video class="reels-play" src='${ele.url}' controls></video>
+                                    <button class="share-link"><i class="fa-solid fa-share share-link"></i></button>
+                                    <video class="reels-play" src='${ele.url}'></video>
                                 </li>`
                                 
         })
@@ -95,10 +96,13 @@ let mainShow = () =>{
             let idCheck = ele.parentElement.parentElement.getAttribute("id");
             check(idCheck,ele)
         })
-
         const reelsPlay = document.querySelectorAll(".reels-play");
-        console.log(reelsPlay)
-        
+        for(let i=0;i<reelsPlay.length;i++){
+            let timer = setTimeout(()=>{
+                reelsPlay[i].play();
+                reelsPlay[i-1].pause();
+            },(i)*15000)
+        }
     })
 }
 
@@ -130,9 +134,25 @@ document.addEventListener("click",(e)=>{
         showComment(vId);
         
     } else if(e.target.classList.contains("close-msg")){
-        commentArea.style.display = 'none'
+        commentArea.style.display = 'none';
+    } else if(e.target.classList.contains("share-link")){
+        let vId = e.target.parentElement.parentElement.getAttribute("id");
+        getLink(vId)
+    }  else if(e.target.classList.contains("reels-play")){
+        if(e.target.paused){
+            e.target.play();
+        } else {
+            e.target.pause();
+        }
     }
 })
+
+
+const clicker = document.querySelector("#click");
+        const userNameMsg = document.querySelector(".user-msg")
+        setInterval(()=>{
+            window.scrollBy({top:window.innerHeight,behavior:"smooth"});
+        },15000)
 
 
 
@@ -158,7 +178,9 @@ const plusLike = (vId) =>{
             if(count == 0){
                 liker.push(dataLog.username)
             }
-            console.log(count)
+            const likeBtnn = document.querySelector(`.like-length${ele.id}`);
+            console.log(likeBtnn);
+            likeBtnn.innerHTML = liker.length;
             db.collection('link').doc(`${ele.id}`)
             .update({
                 like : liker
@@ -188,6 +210,8 @@ const disLike = (vId) =>{
             ele.like.forEach((e)=>{
                 liker.push(e);
             })
+            const likeBtnn = document.querySelector(`.like-length${ele.id}`);
+            likeBtnn.innerHTML = liker.length;
             db.collection('link').doc(`${ele.id}`)
             .update({
                 like : liker
@@ -214,7 +238,7 @@ let check = (idCheck,element)=>{
                         element.style.color = 'red'
                     }
                 }
-        })                     
+            })                     
         })
     })
 }
@@ -241,14 +265,6 @@ let commentPlus = (vId) =>{
     })
 })
 }
-
-const clicker = document.querySelector("#click");
-const userNameMsg = document.querySelector(".user-msg")
-setInterval(()=>{
-    window.scrollBy({top:window.innerHeight,behavior:"smooth"});
-},20000)
-
-
 
 let showComment = (vId) =>{
     db.collection('link')
@@ -278,3 +294,17 @@ let showComment = (vId) =>{
     })
 }
 
+let getLink = (vId) =>{
+    db.collection('link')
+    .get()
+    .then((data)=>{
+        rawData = (data.docs.map((item) =>{
+            return {...item.data(),id:item.id}
+        }))
+        rawData.forEach((ele)=>{
+            if(ele.id == vId){
+                prompt("Copy The Link To Share",ele.url)
+            }
+        })
+    })
+}
