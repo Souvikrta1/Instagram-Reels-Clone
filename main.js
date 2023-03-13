@@ -1,10 +1,10 @@
 const firebaseApp = firebase.initializeApp({
-    apiKey: "AIzaSyBUdoks0DRGjgbHXVTXCbbAQ0Qpr4uyUnA",
-    authDomain: "reels-pro.firebaseapp.com",
-    projectId: "reels-pro",
-    storageBucket: "reels-pro.appspot.com",
-    messagingSenderId: "100087925963",
-    appId: "1:100087925963:web:a8e5829695f485f9fa9f4e"
+    apiKey: "AIzaSyCqhNgiWAtTXTBq0on3eqsloVhHzp90rIQ",
+  authDomain: "instagram-reels-9cc40.firebaseapp.com",
+  projectId: "instagram-reels-9cc40",
+  storageBucket: "instagram-reels-9cc40.appspot.com",
+  messagingSenderId: "695960196264",
+  appId: "1:695960196264:web:7d1cdd43cf34ebab2a5e9d"
 })
 
 let data = localStorage.getItem('data');
